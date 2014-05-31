@@ -12,7 +12,9 @@ if ( ! class_exists( 'Minify_CSS_Compressor' ) ) {
 	require_once( 'Minify_CSS_Compressor/Compressor.php' );
 }
 
-require_once( 'JShrink/Minifier.php' );
+if ( ! class_exists( '\\JShrink\\Minifier' ) ) {
+	require_once( 'JShrink/Minifier.php' );
+}
 
 new Minit_Min;
 
